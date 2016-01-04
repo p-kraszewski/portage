@@ -7,7 +7,8 @@ EAPI=4
 inherit bash-completion-r1
 
 DESCRIPTION="A sophisticated build-tool for Erlang projects that follows OTP principles"
-HOMEPAGE="https://github.com/rebar/rebar"
+HOMEPAGE="https://github.com/rebar/rebar3"
+
 MY_PV=${PV/3.0.0_}
 MY_PV=${MY_PV/beta/beta-}
 SRC_URI="https://github.com/rebar/${PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
@@ -16,9 +17,12 @@ S=${WORKDIR}/${PN}-${MY_PV}
 LICENSE="Apache-2.0"
 SLOT="3"
 KEYWORDS="~amd64"
-IUSE=""
+IUSE="bash-completion zsh-completion"
 
-RDEPEND="dev-lang/erlang"
+RDEPEND="
+	dev-lang/erlang
+	zsh-completion? ( app-shells/gentoo-zsh-completions )
+"
 DEPEND="${RDEPEND}"
 
 src_test() {
@@ -32,5 +36,9 @@ src_compile() {
 src_install() {
 	dobin rebar3
 	dodoc rebar.config.sample THANKS
-	dobashcomp priv/shell-completion/bash/${PN}
+	use bash-completion && dobashcomp priv/shell-completion/bash/${PN}
+	if use zsh-completion ; then
+		insinto /usr/share/zsh/site-functions
+		doins priv/shell-completion/zsh/_${PN}
+	fi
 }
