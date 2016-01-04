@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<repositories encoding="UTF-8" version="1.1">
+  <repo priority="50" quality="experimental">
+    <name>p-kraszewski-erlang</name>
+    <description>Pawel Kraszewski's Erlang repo</description>
+    <homepage>https://github.com/p-kraszewski/portage</homepage>
+    <owner>
+      <email>gentoo@linuxpedia.pl</email>
+      <name>Pawel Kraszewski</name>
+    </owner>
+    <source type="git">git://github.com/p-kraszewski/portage.git</source>
+  </repo>
+</repositories>
