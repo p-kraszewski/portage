@@ -11,6 +11,11 @@
     <name>Luis Ressel</name>
     <description>Proxy-maintainer, assign bugs</description>
   </maintainer>
+  <maintainer>
+    <email>gentoo@linuxpedia.pl</email>
+    <name>Pawel Kraszewski</name>
+    <description>Forward porting</description>
+  </maintainer>
   <upstream>
     <remote-id type="github">rebar/rebar</remote-id>
   </upstream>

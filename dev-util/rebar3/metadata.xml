@@ -3,13 +3,9 @@
 <pkgmetadata>
   <herd>proxy-maintainers</herd>
   <maintainer>
-    <email>djc@gentoo.org</email>
-    <name>Dirkjan Ochtman</name>
-  </maintainer>
-  <maintainer>
-    <email>aranea@aixah.de</email>
-    <name>Luis Ressel</name>
-    <description>Proxy-maintainer, assign bugs</description>
+    <email>gentoo@linuxpedia.pl</email>
+    <name>Pawel Kraszewski</name>
+    <description>Forward porting</description>
   </maintainer>
   <upstream>
     <remote-id type="github">rebar/rebar3</remote-id>
